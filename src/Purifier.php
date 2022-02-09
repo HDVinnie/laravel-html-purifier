@@ -67,7 +67,7 @@ class Purifier
      *
      * @see http://htmlpurifier.org/docs/enduser-customize.html
      */
-    private function addCustomDefinition(array $definitionConfig, HTMLPurifier_Config $configObject = null): ?HTMLPurifier_Config
+    private function addCustomDefinition(array $definitionConfig, HTMLPurifier_Config $configObject = null)
     {
         if (!$configObject) {
             $configObject = HTMLPurifier_Config::createDefault();
@@ -102,7 +102,7 @@ class Purifier
     /**
      * Add provided attributes to the provided definition
      */
-    private function addCustomAttributes(array $attributes, HTMLPurifier_HTMLDefinition $definition): HTMLPurifier_HTMLDefinition
+    private function addCustomAttributes(array $attributes, HTMLPurifier_HTMLDefinition $definition)
     {
         foreach ($attributes as $attribute) {
             // Get configuration of attribute
@@ -133,7 +133,7 @@ class Purifier
     /**
      * Add provided elements to the provided definition
      */
-    private function addCustomElements(array $elements, HTMLPurifier_HTMLDefinition $definition): ?HTMLPurifier_HTMLDefinition
+    private function addCustomElements(array $elements, HTMLPurifier_HTMLDefinition $definition)
     {
         foreach ($elements as $element) {
             // Get configuration of element
@@ -249,7 +249,7 @@ class Purifier
     /**
      * Get HTMLPurifier instance.
      */
-    public function getInstance(): HTMLPurifier
+    public function getInstance()
     {
         return $this->purifier;
     }
