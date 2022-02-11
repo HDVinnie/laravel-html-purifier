@@ -9,7 +9,7 @@ class CleanHtmlInput implements CastsAttributes
     /**
      * Cast the given value. Does not clean the HTML.
      */
-    public function get(\Illuminate\Database\Eloquent\Model $model, string $key, $value, array $attributes): array
+    public function get($model, string $key, $value, array $attributes)
     {
         return $value;
     }
@@ -17,7 +17,7 @@ class CleanHtmlInput implements CastsAttributes
     /**
      * Prepare the given value for storage by cleaning the HTML.
      */
-    public function set(\Illuminate\Database\Eloquent\Model $model, string $key, array $value, array $attributes)
+    public function set($model, string $key, $value, array $attributes)
     {
         return clean($value);
     }
